@@ -1,0 +1,23 @@
+{{% define "homePage" %}}
+
+  {{% template "header" %}}
+<body>
+  <h1 ng-controller="HomeCtrl">{{ title }}</h1>
+  <h2>{{% .Intro %}}</h2>
+  <ul>
+  {{% range .Messages %}}
+    <li> {{% . %}} </li>
+  {{% end %}}
+  </ul>
+</body>
+<script src="/js/angular.min.js"></script>
+<script>
+  function HomeCtrl($scope) {
+    $scope.title = "Hello from Angular";
+  }
+</script>
+</html>
+
+</html>
+{{% end %}}
+
