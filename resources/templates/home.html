@@ -1,5 +1,9 @@
+{{%/* see http://golang.org/pkg/html/template/ */%}}
+
+{{%/* we can name parts of our templates to call them from somewhere else */%}}
 {{% define "homePage" %}}
 
+  {{%/* loading the header template */%}}
   {{% template "header" %}}
 <body>
   <h1 ng-controller="HomeCtrl">{{ title }}</h1>
